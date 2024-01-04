@@ -4,7 +4,6 @@ metadata:
   annotations:
     com.ibm.mq/write-defaults-spec: 'false'
   name: mq
-  namespace: cp4i
   finalizers:
     - finalizer.queuemanagers.mq.ibm.com
 spec:
