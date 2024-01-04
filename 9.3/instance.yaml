@@ -1,0 +1,30 @@
+apiVersion: mq.ibm.com/v1beta1
+kind: QueueManager
+metadata:
+  annotations:
+    com.ibm.mq/write-defaults-spec: 'false'
+  name: mq
+  namespace: cp4i
+  finalizers:
+    - finalizer.queuemanagers.mq.ibm.com
+spec:
+  license:
+    accept: true
+    license: L-VTPK-22YZPK
+    use: NonProduction
+  queueManager:
+    availability:
+      type: NativeHA
+    name: CUSTOM
+    storage:
+      defaultClass: ocs-storagecluster-cephfs
+      queueManager:
+        type: persistent-claim
+  version: 9.3.4.0-r1
+  web:
+    console:
+      authentication:
+        provider: integration-keycloak
+      authorization:
+        provider: integration-keycloak
+    enabled: true
