@@ -4,7 +4,7 @@ metadata:
   labels:
     operators.coreos.com/ibm-mq.openshift-operators: ''
   annotations:
-    argocd.argoproj.io/sync-wave: "100"
+    argocd.argoproj.io/sync-wave: "-1"
   name: ibm-mq
   namespace: openshift-operators
 spec:
