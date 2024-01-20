@@ -1,3 +1,0 @@
-storage:
-  fileStorage: 'ocs-storagecluster-cephfs'
-namespace: 'cp4i'
